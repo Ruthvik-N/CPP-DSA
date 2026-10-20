@@ -49,15 +49,52 @@ int primeNumCount(int n){
    return count ;
 }
 
+// 3) Digits of a Number
+ void printDig( int n ){
+  while (n != 0)
+  {
+    int digit = n % 10;
+    cout << digit << endl;
 
+    n = n / 10;
+
+  }
+}
+  
+   //sum of the digits
+   void SumOfDig( int n ){
+      int sum = 0;
+
+   while (n != 0)
+  {
+    int digit = n % 10;
+    sum += digit;
+
+    n = n / 10;
+
+  }
+  cout << sum << endl;
+ }
+  
+   
 
     
     int main(){
       //  int n = 45;
       //  cout << primeNumCheck(n) << endl;
 
-      int n = 900;
-       cout << primeNumCount(n) << endl;
+      // int n = 900;
+      //  cout << primeNumCount(n) << endl;
+
+      int n = 4590;
+      printDig(n) ;
+
+      cout << endl;
+
+      int x = 0;
+      SumOfDig(x);
+
+      cout << endl;
        return 0;
     }
     
