@@ -1,5 +1,6 @@
 # include <iostream>
 # include <vector>
+# include <math.h>
 using namespace std;
 
 //math for dsa
@@ -76,7 +77,28 @@ int primeNumCount(int n){
   cout << sum << endl;
  }
   
-   
+   bool isArmstrongNum( int n){
+      int sum = 0;
+      int original = n;
+      
+      while (n != 0)
+      {
+         int digit = n % 10;
+         sum += pow(digit,3);
+
+         n = n / 10;
+         
+      }
+
+      if (sum == original)
+      {
+         return true;
+         cout << "Number entered is an Armstrong number" <<" " << n << endl;
+      }else{
+         return false;
+      }
+      
+   }
 
     
     int main(){
@@ -86,15 +108,18 @@ int primeNumCount(int n){
       // int n = 900;
       //  cout << primeNumCount(n) << endl;
 
-      int n = 4590;
-      printDig(n) ;
+      // int n = 4590;
+      // printDig(n) ;
 
-      cout << endl;
+      // cout << endl;
 
-      int x = 0;
-      SumOfDig(x);
+      // int x = 0;
+      // SumOfDig(x);
 
-      cout << endl;
+      // cout << endl;
+
+      int n = 407;
+      cout << isArmstrongNum(n) <<  endl;
        return 0;
     }
     
