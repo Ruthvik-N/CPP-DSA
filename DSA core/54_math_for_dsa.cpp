@@ -119,7 +119,14 @@ int primeNumCount(int n){
       // cout << endl;
 
       int n = 407;
-      cout << isArmstrongNum(n) <<  endl;
+      if (isArmstrongNum(n))
+      {
+        cout << "Is an Armstrong Number" << endl;
+      }
+      else{
+         cout << "Not an armstrong Number" << endl;
+      }
+      
        return 0;
     }
     
