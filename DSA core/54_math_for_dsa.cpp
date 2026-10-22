@@ -76,6 +76,7 @@ int primeNumCount(int n){
   }
   cout << sum << endl;
  }
+ //3 Armstrong number
   
    bool isArmstrongNum( int n){
       int sum = 0;
@@ -100,6 +101,27 @@ int primeNumCount(int n){
       
    }
 
+   // 4 Euclid's Algorithm
+
+int gcd ( int a, int b){
+      while ( a > 0 && b > 0 )
+   {
+      if (a > b)
+      {
+         a = a % b ;
+      }
+      else if (a < b)
+      {
+         b = b % a ;
+      }else return a ; 
+      
+   }
+   
+   if (a == 0) return b;
+   return a;
+   
+}
+
     
     int main(){
       //  int n = 45;
@@ -118,15 +140,20 @@ int primeNumCount(int n){
 
       // cout << endl;
 
-      int n = 407;
-      if (isArmstrongNum(n))
-      {
-        cout << "Is an Armstrong Number" << endl;
-      }
-      else{
-         cout << "Not an armstrong Number" << endl;
-      }
-      
+      // int n = 407;
+      // if (isArmstrongNum(n))
+      // {
+      //   cout << "Is an Armstrong Number" << endl;
+      // }
+      // else{
+      //    cout << "Not an armstrong Number" << endl;
+      // }
+      cout << gcd(123, 648) <<  endl;
+      cout << gcd(0,45) << endl;
+      cout << gcd(0,0) << endl;
+      cout << gcd(30,0) << endl;
+      cout << gcd(35,70) << endl;
+
        return 0;
     }
     
