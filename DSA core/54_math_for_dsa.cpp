@@ -102,6 +102,7 @@ int primeNumCount(int n){
    }
 
    // 4 Euclid's Algorithm
+   //for finding HCF or GCD (Highest common factor OR Greatest common  divisor)
 
 int gcd ( int a, int b){
       while ( a > 0 && b > 0 )
@@ -121,6 +122,17 @@ int gcd ( int a, int b){
    return a;
    
 }
+
+//5 LCM-(Least Common Multiple)
+  int lcm (int a , int b){
+   if (a == 0 || b == 0) return 0;
+   
+   
+     int hcf = gcd( a , b);
+     int lcm = (a /hcf) * b ;
+
+   return lcm;
+  }
 
     
     int main(){
@@ -148,11 +160,17 @@ int gcd ( int a, int b){
       // else{
       //    cout << "Not an armstrong Number" << endl;
       // }
-      cout << gcd(123, 648) <<  endl;
-      cout << gcd(0,45) << endl;
-      cout << gcd(0,0) << endl;
-      cout << gcd(30,0) << endl;
-      cout << gcd(35,70) << endl;
+      // cout << gcd(123, 648) <<  endl;
+      // cout << gcd(0,45) << endl;
+      // cout << gcd(0,0) << endl;
+      // cout << gcd(30,0) << endl;
+      // cout << gcd(35,70) << endl;
+
+
+      cout << lcm(30,36) << endl;
+      cout << lcm(37,51) << endl;
+      cout << lcm(0,3) << endl;
+      cout << lcm(5,0) << endl;
 
        return 0;
     }
