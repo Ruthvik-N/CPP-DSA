@@ -134,6 +134,24 @@ int gcd ( int a, int b){
    return lcm;
   }
 
+  //6 Reverse Number
+  int reverseNum(int n){
+   int revNum = 0;
+
+   while (n != 0)
+   {
+     int dg = n % 10;
+
+      if (revNum > INT_MAX/10 || revNum < INT_MIN/10 ) return 0;
+
+      revNum = revNum * 10 + dg;
+      n = n / 10;
+   
+   }
+   
+   return revNum ;
+
+  }
     
     int main(){
       //  int n = 45;
@@ -167,10 +185,19 @@ int gcd ( int a, int b){
       // cout << gcd(35,70) << endl;
 
 
-      cout << lcm(30,36) << endl;
-      cout << lcm(37,51) << endl;
-      cout << lcm(0,3) << endl;
-      cout << lcm(5,0) << endl;
+      // cout << lcm(30,36) << endl;
+      // cout << lcm(37,51) << endl;
+      // cout << lcm(0,3) << endl;
+      // cout << lcm(5,0) << endl;
+
+       cout << reverseNum(4560) << endl;
+       cout << reverseNum(-369) << endl;         
+       cout << reverseNum(1200) << endl;         
+       cout << reverseNum(0) << endl;            
+       cout << reverseNum(7) << endl;            
+       cout << reverseNum(1534236469) << endl;   
+       cout << reverseNum(1463847412) << endl;   
+       cout << reverseNum(-2147483648) << endl;
 
        return 0;
     }
