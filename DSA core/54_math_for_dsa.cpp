@@ -152,6 +152,17 @@ int gcd ( int a, int b){
    return revNum ;
 
   }
+
+  //7 Palindrome Number
+
+  int PalindromeCheck(int x){
+      if (x < 0) return false;
+
+      int revNum = reverseNum(x);
+      return x == revNum;
+
+      
+  }
     
     int main(){
       //  int n = 45;
@@ -190,14 +201,22 @@ int gcd ( int a, int b){
       // cout << lcm(0,3) << endl;
       // cout << lcm(5,0) << endl;
 
-       cout << reverseNum(4560) << endl;
-       cout << reverseNum(-369) << endl;         
-       cout << reverseNum(1200) << endl;         
-       cout << reverseNum(0) << endl;            
-       cout << reverseNum(7) << endl;            
-       cout << reverseNum(1534236469) << endl;   
-       cout << reverseNum(1463847412) << endl;   
-       cout << reverseNum(-2147483648) << endl;
+      //  cout << reverseNum(4560) << endl;
+      //  cout << reverseNum(-369) << endl;         
+      //  cout << reverseNum(1200) << endl;         
+      //  cout << reverseNum(0) << endl;            
+      //  cout << reverseNum(7) << endl;            
+      //  cout << reverseNum(1534236469) << endl;   
+      //  cout << reverseNum(1463847412) << endl;   
+      //  cout << reverseNum(-2147483648) << endl;
+       int a = 23432;
+       int b = -2332;
+       int c = 9999;
+       int d = 000;
+      if ( PalindromeCheck(a))
+       cout << "Number is a Palindrome number" << endl;
+      else 
+      cout <<"Number is not a Palindrome number" << endl;
 
        return 0;
     }
